@@ -2,6 +2,22 @@ Attend is the system to manage attendants at some events.
 
 THIS CODE IS FOR LEARNING Rails. NOT FOR REAL USE.
 
+rake stats
++----------------------+-------+-------+---------+---------+-----+-------+
+| Name                 | Lines |   LOC | Classes | Methods | M/C | LOC/M |
++----------------------+-------+-------+---------+---------+-----+-------+
+| Controllers          |   326 |   257 |       6 |      30 |   5 |     6 |
+| Helpers              |    20 |    17 |       0 |       1 |   0 |    15 |
+| Models               |    70 |    58 |       5 |       8 |   1 |     5 |
+| Libraries            |     0 |     0 |       0 |       0 |   0 |     0 |
+| Integration tests    |     0 |     0 |       0 |       0 |   0 |     0 |
+| Functional tests     |    77 |    60 |       5 |       0 |   0 |     0 |
+| Unit tests           |    52 |    39 |       9 |       0 |   0 |     0 |
++----------------------+-------+-------+---------+---------+-----+-------+
+| Total                |   545 |   431 |      25 |      39 |   1 |     9 |
++----------------------+-------+-------+---------+---------+-----+-------+
+  Code LOC: 332     Test LOC: 99     Code to Test Ratio: 1:0.3
+
 TODO
  use isadmin flag to manage administration role
        only member_id = 1 or isadmin member can login.
