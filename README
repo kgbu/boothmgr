@@ -1,5 +1,7 @@
 Attend is the system to manage attendants at some events.
 
+THIS CODE IS FOR LEARNING Rails. NOT FOR REAL USE.
+
 TODO
  use isadmin flag to manage administration role
        only member_id = 1 or isadmin member can login.
