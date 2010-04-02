@@ -1,0 +1,21 @@
+<p>
+  <b><%=h @game.title %></b> (<%=h @game.homeaway %>)
+<br />
+  <b>キックオフ日時</b>
+  <%=h @game.kickoff.to_s(:short) %>
+<br />
+  <b>Time Schedule</b>
+<br />
+  <% @schedulehash.each do |t, ok| %>
+    <%=h truncate(t,12) %><br />
+    :: <%= numberofattendants(@game.id, ok) %> 名参加<br />
+  <% end %>
+</p>
+
+<hr>
+
+<% if session[:member_id] %>
+<%= link_to '編集する', edit_game_path(@game) %> |
+<% end %>
+<%= link_to '試合一覧へ戻る', games_path %> |
+<%= link_to 'ボランティア参加登録詳細へ', game_attends_path(@game) %>

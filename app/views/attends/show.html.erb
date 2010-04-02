@@ -1,0 +1,19 @@
+<p>
+  <b><%= @game.title %></b><br />
+  <b>名前</b>
+  <%=h @member.name %>
+</p>
+
+<p>
+  <b>email</b>
+  <%=h @member.email %>
+</p>
+  <% @schedulehash.each do |t, ok| %>
+<p>
+<%=h t %>: 
+<%=h eval("@attend." + ok.to_s) %>
+</p>
+  <% end %>
+
+<%= link_to '編集する', edit_game_attend_path(@game, @attend) %> |
+<%= link_to '一覧へ戻る', game_attends_path %>

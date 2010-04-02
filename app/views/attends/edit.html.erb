@@ -1,0 +1,21 @@
+<% form_for([@game, @attend]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  <b><%= @game.title %></b><br />
+  氏名を選択してください<br />
+  <%= f.collection_select(:member_id, @members, :id, :name) %>
+  </p>
+</p>
+  <% @schedulehash.each do |t, ok| %>
+<p>
+<%=h t %>:
+<%= f.text_field ok %>
+</p>
+  <% end %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to '一覧に戻る', game_attends_path(@game) %>

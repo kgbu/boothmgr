@@ -1,0 +1,13 @@
+<p>
+  <b>名前</b>
+  <%=h @member.name %>
+</p>
+
+<p>
+  <b>email</b>
+  <%=h @member.email %>
+</p>
+
+
+<%= link_to '編集する', edit_member_path(@member) %> |
+<%= link_to '一覧へ戻る', members_path %>

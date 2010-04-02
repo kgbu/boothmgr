@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  kickoff: 2010-03-13 03:09:31
+  homeaway: MyString
+  title: MyString
+
+two:
+  kickoff: 2010-03-13 03:09:31
+  homeaway: MyString
+  title: MyString

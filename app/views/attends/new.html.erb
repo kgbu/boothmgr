@@ -1,0 +1,23 @@
+<h1><%= @game.title %>への参加登録</h1>
+
+
+<% form_for([@game, @attend]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  氏名を選択してください<br />
+  <%= f.collection_select(:member_id, @members, :id, :name) %>
+  </p>
+  <p>
+    <b>参加スケジュール</b><br />
+    <% @schedulehash.each do |t, ok| %>
+    <%= t %>
+    <%= f.text_field ok %> <br />
+    <% end %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to '一覧に戻る', game_attends_path(@game) %>

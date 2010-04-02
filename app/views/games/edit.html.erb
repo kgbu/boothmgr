@@ -1,0 +1,28 @@
+<h1>Editing game</h1>
+
+<% form_for(@game) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :kickoff %><br />
+    <%= f.datetime_select :kickoff %>
+  </p>
+  <p>
+    <%= f.label :homeaway %><br />
+    <%= f.text_field :homeaway %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    タイムスケジュール(1行に内容と開始・終了時刻を記述)<br />
+    <%= f.text_area:timeschedule %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @game %> |
+<%= link_to 'Back', games_path %>

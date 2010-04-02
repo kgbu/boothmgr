@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  member: MyString
+  email: MyString
+  prep: MyString
+  prepsign: MyString
+  signhelp: MyString
+  settledown: MyString
+
+two:
+  member: MyString
+  email: MyString
+  prep: MyString
+  prepsign: MyString
+  signhelp: MyString
+  settledown: MyString

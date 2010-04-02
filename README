@@ -1,0 +1,6 @@
+Attend is the system to manage attendants at some events.
+
+TODO
+ use isadmin flag to manage administration role
+       only member_id = 1 or isadmin member can login.
+       only member_id = 1 or isadmin member can set isadmin flag

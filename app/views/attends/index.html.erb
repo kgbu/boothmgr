@@ -1,0 +1,30 @@
+<h1><%= @game.title %>への参加登録リスト</h1>
+
+<table>
+  <tr>
+    <th>名前</th>
+    <% @schedulehash.each do |t, ok| %>
+    <th valign="top"><%=h truncate(t.to_s, 12) %></th>
+    <% end %>
+  </tr>
+
+<% @attends.each do |attend| %>
+  <tr>
+    <td><%=h attend.member.name %></td>
+    <% @schedulehash.each do |t, ok| %>
+    <td><%=h eval("attend." + ok.to_s) %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td> </td>
+    <td><%= link_to 'Show', game_attend_path(@game, attend) %></td>
+    <td><%= link_to 'Edit', edit_game_attend_path(@game, attend) %></td>
+    <td><%= link_to 'Delete', game_attend_path(@game, attend) , :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '登録追加', new_game_attend_path %>
+<%= link_to '試合情報に戻る', @game %>

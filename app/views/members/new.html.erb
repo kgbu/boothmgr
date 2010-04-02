@@ -1,0 +1,26 @@
+<h1>メンバー新規登録</h1>
+
+<% form_for(@member) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    名前<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    Email<br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    パスワード(管理者でなければ不要)<br />
+    <%= f.password_field :password %>
+    <br />  
+    パスワードの確認のため、同じものをもう一度入力してください<br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to '一覧に戻る', members_path %>
